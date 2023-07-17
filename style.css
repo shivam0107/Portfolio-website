@@ -889,6 +889,9 @@
 
 /* project section end  */
 
+
+/* skill section start  */
+
 .skills-container{
     position: relative;
     display: flex;
@@ -1059,6 +1062,72 @@
     padding: 0 1rem;
     font-size: 1.5rem;
 }
+
+@media (max-width:1195px) {
+
+    .skills-container {
+           flex-direction: column;
+           justify-content: center;
+        padding: 2em;
+           
+           margin-left: 25%;
+        }
+
+
+}
+@media (max-width:890px) {
+
+    .skills-container {
+        margin-left: 10%;
+
+    }
+    .skill-heading {
+        font-size: 40px;
+    }
+
+    .caps {
+    font-size: 50px;
+    }
+
+    .skills-logo {
+        width: 30px;
+        
+    }
+        .blob-style {
+           
+            left: 30%;
+    animation: blobAnimate 8s linear infinite;
+        }
+
+        .skill-container-right{
+           /* flex-wrap: wrap; */
+          
+           
+        }
+}
+@media (max-width:655px) {
+.skill-subheading {
+       
+        width: 60%;
+       overflow: auto;
+        
+
+    }
+
+        .skill-subheading p{
+              overflow: scroll;
+        }
+
+
+        .skills-container {
+            margin-left: 0%;
+    
+        }
+    
+}
+
+
+/* skill section end  */
 
 
 footer{
