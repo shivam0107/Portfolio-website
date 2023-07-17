@@ -3,13 +3,15 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: "Be Vietnam Pro" ,sans-serif;
+    font-family: sans-serif;
 
 }
 
 :root{
     --bg0range:#e84949;
+    --color-1: #e84949;
 
 }
 
@@ -27,64 +29,167 @@
 
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    padding-top: 1rem;
+/* navbar start */
+ a {
+     text-decoration: none;
+ }
+
+ ul {
+     list-style: none;
+ }
+
+ .navbar-container{
+     max-width: 1170px;
+     margin: auto;
+ }
+
+ .row {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .align-items-center {
+     align-items: center;
+ }
+
+ .justify-content-between {
+     justify-content: space-between;
+ }
+
+ /*header*/
+ .header {
+     background-color: var(--color-1);
+     padding: 12px 0;
+     position: relative;
+ }
+
+ .header .logo,
+ .header .nav {
+     padding: 0 15px;
+ }
+
+ .header .logo a {
+     font-size: 30px;
+     color: #ffffff;
+     text-transform: capitalize;
+ }
+
+ .header .nav ul li {
+     display: inline-block;
+     margin-left: 40px;
+ }
+
+ .header .nav ul li a {
+     display: block;
+     font-size: 16px;
+     padding: 10px 0;
+     color: rgba(255, 255, 255, 0.7);
+     text-transform: capitalize;
+     transition: all 0.5s ease;
+ }
+
+ .header .nav ul li a:hover,
+ .header .nav ul li a.active {
+     color: #ffffff;
+ }
+
+ .header #nav-check {
+     position: absolute;
+     opacity: 0;
+     pointer-events: none;
+ }
+
+ .nav-toggler {
+     height: 34px;
+     width: 44px;
+     background-color: #ffffff;
+     border-radius: 4px;
+     cursor: pointer;
+     display: none;
+     align-items: center;
+     justify-content: center;
+     margin-right: 15px;
+ }
+
+ .nav-toggler span {
+     display: block;
+     height: 2px;
+     width: 20px;
+     background-color: var(--color-1);
+     position: relative;
+ }
+
+ .nav-toggler span::before,
+ .nav-toggler span::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: var(--color-1);
+     left: 0;
+ }
+
+ .nav-toggler span::before {
+     top: -6px;
+ }
+
+ .nav-toggler span::after {
+     top: 6px;
+ }
+
+ @media(max-width: 991px) {
+     .nav-toggler {
+         display: flex;
+     }
+
+     .header .nav {
+         position: absolute;
+         left: 0;
+         top: 100%;
+         width: 100%;
+         background-color: var(--color-1);
+         border-top: 1px solid rgba(255, 255, 255, 0.2);
+         opacity: 0;
+         visibility: hidden;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+     }
+
+     .header .nav ul li {
+         display: block;
+         margin: 0;
+     }
+
+     .header #nav-check:checked~.nav {
+         opacity: 1;
+         visibility: visible;
+     }
+
+     .header #nav-check:focus~.nav-toggler {
+         box-shadow: 0 0 15px #000000;
+     }
+
+     .header #nav-check:checked~.nav-toggler span {
+         background-color: transparent;
+         
+     }
+
+     .header #nav-check:checked~.nav-toggler span::before {
+         top: 0;
+         transform: rotate(45deg);
+     }
+
+     .header #nav-check:checked~.nav-toggler span::after {
+         top: 0;
+         transform: rotate(-45deg);
+     }
+ }
 
 
-}
 
-.logo-container{
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-
-}
-
-.logo
-{
-    width: 80px;
-}
-
-.logo-text{
-    margin-left: -1.2rem;
-    font-size: 28px;
-}
-
-
-.nav-items{
-    display: flex;
-    gap: 2rem;
-    padding: 0 4em;
-}
-
-.nav-items div{
-    font-size: 20px;
-    font-weight: 595;
-
-    cursor: pointer;
-}
-
-.nav-items div a{
-    color: black;
-
-}
-
-a{
-    text-decoration: none;
-
-}
-
-.nav-items div:hover{
-    transform: 0.8s;
-
-    font-weight: bold;
-}
-
-
+/* navbar section end */
 
 .hero-section{
     position: relative;
@@ -776,7 +881,9 @@ footer{
     font-size: 5em;
 }
 
-
+.icon{
+    color: black;
+}
 .link-wrapper{
     display: flex;
     gap: 1.2rem;
@@ -796,4 +903,8 @@ footer{
 .icon-wrapper{
     display: flex;
     gap: 1rem;
+}
+.social-icon{
+    display: flex;
+        gap: 1rem;
 }
