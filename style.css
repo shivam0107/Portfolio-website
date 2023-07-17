@@ -871,7 +871,11 @@
             font-size: 13px;
         }
         .project-content{
-            bottom: 0;
+            bottom: 5%;
+        }
+
+        .project-number {
+           font-size: 70px;
         }
 }
 
