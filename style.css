@@ -42,6 +42,7 @@
  .navbar-container{
      max-width: 1170px;
      margin: auto;
+     
  }
 
  .row {
@@ -62,6 +63,7 @@
      background-color: var(--color-1);
      padding: 12px 0;
      position: relative;
+
  }
 
  .header .logo,
@@ -326,14 +328,14 @@
 
 @keyframes scaleImage{
     0%{
-        filter: grayscale(1);
+        filter: grayscale(0);
         transform: scale(1);
 
     }
 
     50%{
         transform: scale(1.1);
-        filter: grayscale(1);
+        filter: grayscale(0);
 
 
     }
@@ -551,6 +553,14 @@
       width: 100%;
   }
 
+   .icons-cube {
+       right: 5em;
+   }
+
+   .icons-dots {
+       right: 5em;
+   }
+
 
 
 
@@ -595,6 +605,9 @@
 
 }
 /* hero section end  */
+
+
+/* project section start  */
 
 
 .project-section{
@@ -759,6 +772,11 @@
     align-items: center;
 }
 
+.btn-group .icon{
+
+    color: white;
+}
+
 .btn-project:hover{
 
     border: none;
@@ -805,6 +823,67 @@
     background-image: url(./images/projects/Project4.png);
 }
 
+
+
+
+@media (max-width:990px) {
+    .project-skill{
+        display: none;
+    }
+    .faded-text{
+        font-size: 4em;
+    }
+    .page-header{
+        padding-top: 80px;
+        font-size: 70px;
+    }
+    .project-card{
+       height: 275px;
+    }
+    
+    #project2 , #project4{
+        margin-left: 0px;
+    }
+    
+      
+
+        .project-container {
+
+          justify-content: center;
+          align-items: center;
+          
+
+
+        }
+
+
+}
+
+
+@media (max-width:670px) {
+    
+    .project-heading {
+            font-size: 25px;
+           
+        }
+
+        .btn-pink{
+            font-size: 13px;
+        }
+        .project-content{
+            bottom: 0;
+        }
+}
+
+@media (max-width:545px) {
+    .btn-group .icon {
+    
+           font-size: 30px;
+        }
+    
+}
+
+/* project section end  */
 
 .skills-container{
     position: relative;
