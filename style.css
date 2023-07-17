@@ -137,6 +137,9 @@
  .nav-toggler span::after {
      top: 6px;
  }
+ /* .copyright{
+    scale: 0;
+ } */
 
  @media(max-width: 991px) {
      .nav-toggler {
@@ -154,13 +157,24 @@
          visibility: hidden;
         z-index: 10;
         display: flex;
-        align-items: center;
+       
+        justify-content: center;
+        /* height: 100vh; */
      }
 
-     .header .nav ul li {
+          /* .copyright {
+              scale: 1;
+           
+            flex-direction: column;
+          } */
+
+     .header .nav ul li{
          display: block;
          margin: 0;
+        
+         
      }
+         
 
      .header #nav-check:checked~.nav {
          opacity: 1;
@@ -190,6 +204,8 @@
 
 
 /* navbar section end */
+
+/* hero section start  */
 
 .hero-section{
     position: relative;
@@ -473,6 +489,112 @@
     }
 
 }
+
+
+@media (max-width:991px) {
+
+    .hero-section{
+        flex-direction: column;
+       
+       
+    }
+    .hero-section-right{
+        align-self: flex-start;
+        margin-left: 20%;
+    }
+      .hero-section-left{
+        align-self: flex-start;
+      }
+         
+    
+  
+
+    
+
+    
+}
+
+@media (max-width:813px) {
+
+
+    .hero-section-right {
+        align-self: flex-start;
+        margin-left: 10%;
+    }
+
+
+}
+@media (max-width:680px) {
+
+
+    .hero-section-right {
+        align-self: flex-start;
+        margin-left: 5%;
+        
+        
+    }
+    
+
+ .hero-section-heading, .hero-section-sub-heading{
+    width: 45%;
+ }
+
+    .hero-section-description{
+        width: 45%;
+    }
+
+  .user-image {
+    width: 80%;
+  }
+    
+  .user-image img{
+      width: 100%;
+  }
+
+
+
+
+}
+@media (max-width:450px) {
+
+
+    .hero-section-right {
+        align-self: flex-start;
+        margin-left: 2.5%;
+
+
+    }
+        .user-image {
+            width: 70%;
+            padding: 1.5rem;
+        }
+    
+        .user-image img {
+            width: 100%;
+        }
+        .icons-cube{
+            right: 7em;
+        }
+    .icons-dots {
+        right: 7em;
+    }
+}
+
+@media (max-width:400px) {
+
+.hero-section-heading,
+    .hero-section-sub-heading {
+        width: 35%;
+    }
+
+    .hero-section-description {
+        width: 35%;
+    }
+   
+
+
+}
+/* hero section end  */
 
 
 .project-section{
