@@ -902,7 +902,7 @@ ul {
 
     #project2,
     #project4 {
-        margin-left: 0px;
+        margin-left: 5px;
     }
 
 
@@ -1237,40 +1237,40 @@ html {
     width: 70%;
 }
 
-.skills_js {
-    width: 80%;
+.skills_javascript{
+    width: 50%;
 }
 
 .skills_react {
-    width: 60%;
-}
-
-.skills_php {
-    width: 60%;
+    width: 10%;
 }
 
 .skills_node {
+    width: 05%;
+}
+
+.skills_MongoDB {
+    width: 10%;
+}
+
+.skills_Express {
+    width: 10%;
+}
+
+.skills_JSP {
     width: 70%;
 }
 
-.skills_firebase {
-    width: 10%;
+.skills_c{
+    width: 85%;
+}
+
+.skills_cpp{
+    width: 70%;
 }
 
 .skills_java {
-    width: 90%;
-}
-
-.skills_figma {
-    width: 40%;
-}
-
-.skills_sketch {
-    width: 10%;
-}
-
-.skills_photoshop {
-    width: 10%;
+    width: 70%;
 }
 
 .skills_close .skills_list {
@@ -1698,6 +1698,18 @@ ul {
     .icons-dots {
         display: none;
     }
+
+        .project-content {
+           
+            padding: 1em;
+           gap: 0.5em;
+        }
+
+                .project-heading {
+                   
+                  
+                    line-height: 1.5rem;
+                }
  
 }
 
@@ -1715,6 +1727,14 @@ ul {
     }
 }
 
+@media (max-width:760px) {
+    .project-heading {
+            font-size: 25px;
+            line-height: 2rem;
+        }
+    
+}
+
 @media screen and (min-width: 568px) {
 
     .skills_container,
@@ -1728,6 +1748,15 @@ ul {
         grid-template-columns: .6fr;
         justify-content: center;
     }
+
+       
+}
+
+@media (max-width:550px) {
+    .project-heading {
+            font-size: 16px;
+        }
+    
 }
 
 @media screen and (min-width:768px) {
